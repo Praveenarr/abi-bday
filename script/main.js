@@ -1,31 +1,26 @@
 // trigger to play music in the background with sweetalert
-// window.addEventListener('load', () => {
-//     Swal.fire({
-//         title: 'Do you want to play music in the background?',
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#3085d6',
-//         cancelButtonColor: '#d33',
-//         confirmButtonText: 'Yes',
-//         cancelButtonText: 'No',
-//     }).then((result) => {
-//         if (result.isConfirmed) {
-//             document.querySelector('.song').play();
-//             animationTimeline();
-//         } else {
-//             animationTimeline();
-//         }
-//     });
-// });
 window.addEventListener('load', () => {
-     document.querySelector('.song').play();
-animationTimeline1()
-
-
+    Swal.fire({
+        title: 'Do you want to play music in the background?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.querySelector('.song').play();
+            animationTimeline();
+        } else {
+            animationTimeline();
+        }
+    });
 });
 
+
 // animation timeline
-const animationTimeline1 = () => {
+const animationTimeline = () => {
     // split chars that needs to be animated individually
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
@@ -230,6 +225,7 @@ const animationTimeline1 = () => {
             scale: 1,
             rotationY: 0,
             color: "#ff69b4",
+            // color:"red",
             ease: Expo.easeOut,
         },
         0.1,
