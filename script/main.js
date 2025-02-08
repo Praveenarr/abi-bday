@@ -1,26 +1,31 @@
 // trigger to play music in the background with sweetalert
+// window.addEventListener('load', () => {
+//     Swal.fire({
+//         title: 'Do you want to play music in the background?',
+//         icon: 'warning',
+//         showCancelButton: true,
+//         confirmButtonColor: '#3085d6',
+//         cancelButtonColor: '#d33',
+//         confirmButtonText: 'Yes',
+//         cancelButtonText: 'No',
+//     }).then((result) => {
+//         if (result.isConfirmed) {
+//             document.querySelector('.song').play();
+//             animationTimeline();
+//         } else {
+//             animationTimeline();
+//         }
+//     });
+// });
 window.addEventListener('load', () => {
-    Swal.fire({
-        title: 'Do you want to play music in the background?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'No',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
-        } else {
-            animationTimeline();
-        }
-    });
+     document.querySelector('.song').play();
+animationTimeline1()
+
+
 });
 
-
 // animation timeline
-const animationTimeline = () => {
+const animationTimeline1 = () => {
     // split chars that needs to be animated individually
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
