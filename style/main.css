@@ -297,3 +297,7 @@ body {
     margin-bottom: 50px;
   }
 }
+
+.hide {
+  display: none;
+}
